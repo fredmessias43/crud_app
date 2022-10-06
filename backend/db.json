@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": "a5409a8b-b3bc-478d-bd8b-6c09f710c290",
+      "name": "prod 1",
+      "description": "desc 1"
+    },
+    {
+      "id": "b14534b9-0fee-47de-88bd-a863db09ff7c",
+      "name": "prod 2",
+      "description": "desc 2"
+    },
+    {
+      "id": "5010224c-dccf-4736-badf-653e8bb49c0f",
+      "name": "prod 3",
+      "description": "desc 3"
+    },
+    {
+      "id": "034602bd-2735-4880-b17e-94fda7da888f",
+      "name": "prod 4",
+      "description": "desc 4"
+    },
+    {
+      "id": "5",
+      "name": "prod 4",
+      "description": "desc 4"
+    }
+  ]
+}
