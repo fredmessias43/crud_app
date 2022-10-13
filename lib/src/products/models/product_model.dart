@@ -1,19 +1,19 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 import 'package:uuid/uuid.dart';
 
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 class ProductModel {
-  late String id;
+  String? id;
   String name;
   String description;
 
   ProductModel({
-    id = String,
+    this.id,
     required this.name,
     required this.description,
   }) {
-    this.id = id ?? const Uuid().v4();
+    id = id ?? const Uuid().v4();
   }
 
   Map<String, dynamic> toMap() {
@@ -26,7 +26,7 @@ class ProductModel {
 
   factory ProductModel.fromMap(Map<String, dynamic> map) {
     return ProductModel(
-      id: map['id'] as String,
+      id: map['id'] != null ? map['id'] as String : null,
       name: map['name'] as String,
       description: map['description'] as String,
     );
@@ -40,4 +40,16 @@ class ProductModel {
   @override
   String toString() =>
       'ProductModel(id: $id, name: $name, description: $description)';
+
+  ProductModel copyWith({
+    String? id,
+    String? name,
+    String? description,
+  }) {
+    return ProductModel(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      description: description ?? this.description,
+    );
+  }
 }
