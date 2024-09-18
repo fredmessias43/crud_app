@@ -14,7 +14,7 @@ class CrudApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/products': (context) => const ProductIndexPage(),
-        '/products/new': (context) => const ProductUpsertPage(),
+        '/products/new': (context) => ProductUpsertPage(),
         '/products/edit': (context) => ProductUpsertPage(
               id: ModalRoute.of(context)!.settings.arguments as String,
             ),

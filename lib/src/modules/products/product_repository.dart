@@ -52,6 +52,7 @@ class SharedProductRepository implements ProductRepository {
   }
 
   Future<List<ProductModel>> _get() async {
+    await Future.delayed(const Duration(seconds: 1));
     final shared = await SharedPreferences.getInstance();
     final json = shared.getString(key) ?? '[]';
     final list = jsonDecode(json) as List;
