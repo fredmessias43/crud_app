@@ -1,4 +1,5 @@
 import 'package:asp/asp.dart';
+import 'package:crud_app/src/core/widgets/crud_app_scaffold.dart';
 import 'package:crud_app/src/modules/products/product_action.dart';
 import 'package:crud_app/src/modules/products/product_atom.dart';
 import 'package:flutter/material.dart';
@@ -13,23 +14,21 @@ class ProductIndexPage extends StatelessWidget {
     return AtomBuilder(builder: (context, get) {
       final products = get($products);
 
-      return Scaffold(
-        appBar: AppBar(
-          title: Row(
-            children: [
-              const Text('Products'),
-              const SizedBox(width: 36),
-              IconButton(
-                color: Colors.black,
-                icon: const Icon(Icons.add),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/products/new');
-                },
-              ),
-            ],
-          ),
+      return CrudAppScaffold(
+        title: Row(
+          children: [
+            const Text('Products'),
+            const SizedBox(width: 36),
+            IconButton(
+              color: Colors.black,
+              icon: const Icon(Icons.add),
+              onPressed: () {
+                Navigator.pushNamed(context, '/products/new');
+              },
+            ),
+          ],
         ),
-        body: AtomBuilder(
+        child: AtomBuilder(
           builder: (context, state) {
             final loading = get($productLoading);
 

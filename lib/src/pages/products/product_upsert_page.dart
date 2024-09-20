@@ -1,13 +1,19 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:asp/asp.dart';
+import 'package:flutter/material.dart';
+
+import 'package:crud_app/src/core/widgets/crud_app_scaffold.dart';
 import 'package:crud_app/src/modules/products/product_action.dart';
 import 'package:crud_app/src/modules/products/product_atom.dart';
 import 'package:crud_app/src/modules/products/product_model.dart';
-import 'package:flutter/material.dart';
 
 class ProductUpsertPage extends StatelessWidget {
   final String? id;
 
-  ProductUpsertPage({super.key, this.id});
+  ProductUpsertPage({
+    super.key,
+    this.id,
+  });
 
   final _form = GlobalKey<FormState>(debugLabel: 'upsert');
   ProductModel product = ProductModel(name: '', description: '');
@@ -34,11 +40,9 @@ class ProductUpsertPage extends StatelessWidget {
       final currentProduct = get($currentProduct);
       product = currentProduct ?? product;
 
-      return Scaffold(
-        appBar: AppBar(
-          title: Text('${id != null ? 'Editar' : 'Criar'} Produto'),
-        ),
-        body: AtomBuilder(
+      return CrudAppScaffold(
+        title: Text('${id != null ? 'Editar' : 'Criar'} Produto'),
+        child: AtomBuilder(
           builder: (context, state) {
             return loading
                 ? const CircularProgressIndicator()
