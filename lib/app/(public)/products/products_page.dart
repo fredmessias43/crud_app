@@ -1,7 +1,7 @@
 import 'package:asp/asp.dart';
-import 'package:crud_app/src/core/widgets/crud_app_scaffold.dart';
-import 'package:crud_app/src/modules/products/product_action.dart';
-import 'package:crud_app/src/modules/products/product_atom.dart';
+import 'package:crud_app/app/core/widgets/crud_app_scaffold.dart';
+import 'package:crud_app/app/modules/products/product_action.dart';
+import 'package:crud_app/app/modules/products/product_atom.dart';
 import 'package:flutter/material.dart';
 
 class ProductIndexPage extends StatelessWidget {

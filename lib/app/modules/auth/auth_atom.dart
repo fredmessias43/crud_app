@@ -1,5 +1,5 @@
 import 'package:asp/asp.dart';
-import 'package:crud_app/src/modules/users/user_model.dart';
+import 'package:crud_app/app/modules/users/user_model.dart';
 
 enum AuthState {
   initial,

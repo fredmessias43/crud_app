@@ -1,7 +1,7 @@
 import 'package:auto_injector/auto_injector.dart';
-import 'package:crud_app/src/modules/auth/auth_cache_repository.dart';
-import 'package:crud_app/src/modules/auth/auth_repository.dart';
-import 'package:crud_app/src/modules/products/product_repository.dart';
+import 'package:crud_app/app/modules/auth/auth_cache_repository.dart';
+import 'package:crud_app/app/modules/auth/auth_repository.dart';
+import 'package:crud_app/app/modules/products/product_repository.dart';
 
 final injector = AutoInjector();
 

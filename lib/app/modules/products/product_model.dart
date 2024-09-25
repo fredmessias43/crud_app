@@ -1,4 +1,4 @@
-import 'package:crud_app/src/core/contracts/model.dart';
+import 'package:crud_app/app/core/contracts/model.dart';
 
 class ProductModel extends Model {
   @override

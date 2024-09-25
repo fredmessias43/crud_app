@@ -1,4 +1,4 @@
-import 'package:crud_app/src/core/contracts/model.dart';
+import 'package:crud_app/app/core/contracts/model.dart';
 
 List<T> upsertArray<T extends Model>(List<T> array, T item) {
   final index = array.indexWhere((element) {

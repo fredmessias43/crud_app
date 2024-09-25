@@ -1,9 +1,9 @@
 import 'package:asp/asp.dart';
-import 'package:crud_app/src/injector.dart';
-import 'package:crud_app/src/modules/products/product_atom.dart';
-import 'package:crud_app/src/modules/products/product_model.dart';
-import 'package:crud_app/src/modules/products/product_repository.dart';
-import 'package:crud_app/src/utils.dart';
+import 'package:crud_app/app/injector.dart';
+import 'package:crud_app/app/modules/products/product_atom.dart';
+import 'package:crud_app/app/modules/products/product_model.dart';
+import 'package:crud_app/app/modules/products/product_repository.dart';
+import 'package:crud_app/app/utils.dart';
 
 final getAllProducts = atomAction((set) async {
   set($productLoading, true);

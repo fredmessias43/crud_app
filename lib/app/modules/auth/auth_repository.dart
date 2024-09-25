@@ -1,5 +1,5 @@
-import 'package:crud_app/src/modules/auth/auth_model.dart';
-import 'package:crud_app/src/modules/users/user_model.dart';
+import 'package:crud_app/app/modules/auth/auth_model.dart';
+import 'package:crud_app/app/modules/users/user_model.dart';
 
 abstract class AuthRepository {
   Future<AuthResponse> login(String email, String password);

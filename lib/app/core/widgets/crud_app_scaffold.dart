@@ -1,6 +1,8 @@
 import 'package:asp/asp.dart';
-import 'package:crud_app/src/modules/auth/auth_atom.dart';
+import 'package:crud_app/app/modules/auth/auth_atom.dart';
+import 'package:crud_app/routes.g.dart';
 import 'package:flutter/material.dart';
+import 'package:routefly/routefly.dart';
 
 class CrudAppScaffold extends StatelessWidget {
   final Widget child;
@@ -23,14 +25,14 @@ class CrudAppScaffold extends StatelessWidget {
               !get($isLogged)
                   ? ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed('/login');
+                        Routefly.navigate(routePaths.login);
                       },
                       child: const Text('Login'),
                     )
                   : Text(get($currentUser)?.email ?? ''),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/products');
+                  Routefly.navigate(routePaths.products.path);
                 },
                 child: const Text('Products'),
               ),

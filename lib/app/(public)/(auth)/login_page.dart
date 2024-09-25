@@ -1,14 +1,21 @@
 import 'package:asp/asp.dart';
-import 'package:crud_app/src/core/widgets/crud_app_scaffold.dart';
-import 'package:crud_app/src/modules/auth/auth_action.dart';
-import 'package:crud_app/src/modules/auth/auth_atom.dart';
+import 'package:crud_app/app/core/widgets/crud_app_scaffold.dart';
+import 'package:crud_app/app/modules/auth/auth_action.dart';
+import 'package:crud_app/app/modules/auth/auth_atom.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final _form = GlobalKey<FormState>(debugLabel: 'login');
+
   final emailController = TextEditingController();
+
   final passwordController = TextEditingController();
 
   @override

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:crud_app/src/core/repositories/shared_repository.dart';
+import 'package:crud_app/app/core/repositories/shared_repository.dart';
 
 abstract class AuthCacheRepository {
   Future<void> saveAccessToken(String accessToken);

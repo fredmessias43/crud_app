@@ -38,6 +38,7 @@ dependencies:
   asp: ^2.0.2
   auto_injector: ^2.0.5
   shared_preferences: ^2.3.2
+  routefly: ^2.0.2
 
 dev_dependencies:
   flutter_test:

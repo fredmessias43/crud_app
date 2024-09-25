@@ -1,9 +1,9 @@
 import 'package:asp/asp.dart';
-import 'package:crud_app/src/injector.dart';
-import 'package:crud_app/src/modules/auth/auth_atom.dart';
-import 'package:crud_app/src/modules/auth/auth_cache_repository.dart';
-import 'package:crud_app/src/modules/auth/auth_model.dart';
-import 'package:crud_app/src/modules/auth/auth_repository.dart';
+import 'package:crud_app/app/injector.dart';
+import 'package:crud_app/app/modules/auth/auth_atom.dart';
+import 'package:crud_app/app/modules/auth/auth_cache_repository.dart';
+import 'package:crud_app/app/modules/auth/auth_model.dart';
+import 'package:crud_app/app/modules/auth/auth_repository.dart';
 
 final login = atomAction2((set, String email, String password) async {
   set($isLoading, true);

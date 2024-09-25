@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:crud_app/src/modules/products/product_model.dart';
-import 'package:crud_app/src/utils.dart';
+import 'package:crud_app/app/modules/products/product_model.dart';
+import 'package:crud_app/app/utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class ProductRepository {
